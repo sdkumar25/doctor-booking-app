@@ -4,8 +4,14 @@ import { connect } from 'react-redux'
 import RenderDatePicker from './DatePicker'
 import '../css/AppointmentForm.css'
 
+export const phoneNumber = value =>
+  value && !/^(0|[1-9][0-9]{9})$/i.test(value)
+    ? 'Invalid phone number, must be 10 digits'
+    : undefined;
+
+
 let AppointmentFormPresenter = (props) => {
-  const { handleSubmit, pristine, reset, submitting } = props
+  const { error, handleSubmit, pristine, reset, submitting } = props
   return (
     <form onSubmit={handleSubmit}>
       <div>
@@ -53,7 +59,7 @@ let AppointmentFormPresenter = (props) => {
        <div>
         <label>Contact Number</label>
         <div>
-          <Field name="patientContactNo" component="input" type="text" placeholder="Contact Number"/>
+          <Field name="patientContactNo" component="input" type="number" validate={[phoneNumber]} placeholder="Contact Number"/>
         </div>
       </div>
       <div>
@@ -62,6 +68,7 @@ let AppointmentFormPresenter = (props) => {
           <Field name="notes" component="textarea"/>
         </div>
       </div>
+      {error && <strong>{error}</strong>}
       <div>
         <button type="submit" disabled={pristine || submitting}>Submit</button>
         <button type="button" disabled={pristine || submitting} onClick={reset}>Clear Values</button>
@@ -73,7 +80,7 @@ let AppointmentFormPresenter = (props) => {
 function mapStateToProps(state, props) {
   return { 
     initialValues: { doctorName: props.doctorObj.Name, specialist: props.speciality },
-    onSubmit : props.submitAppointmentForm
+    onSubmit : props.sumbitForm
   }
 }
 AppointmentFormPresenter = reduxForm({

@@ -2,7 +2,7 @@ import _ from 'lodash'
 import moment from 'moment'
 
 const doctorsData = require('../data/doctors.json');
-let appointmentData = { Doctor : {}, DoctorName: "", Specialist: "", AppointmentDate:"", AppointmentTime: "", PatientName: "", PatientContactNo: "", Notes:"" };
+let appointmentData = { Doctor : { AvailableTimeSlots : [] }, DoctorName: "", Specialist: "", AppointmentDate:"", AppointmentTime: "", PatientName: "", PatientContactNo: "", Notes:"" };
 
 const doctors = (state = { doctorsData: doctorsData, filteredDoctors: [], appointmentData: appointmentData }, action) => {
     switch(action.type) {

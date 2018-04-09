@@ -1,0 +1,11 @@
+.specialistRow:hover{
+    cursor: pointer
+}
+.specialistRow { background: white; padding: 2px 0px 5px 0px; }
+.specialistRow:nth-child(odd) { background: lightgray; }
+.bold{
+    font-weight: bold;
+}
+ul{
+     list-style:none;
+}

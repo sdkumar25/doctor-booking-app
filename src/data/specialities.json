@@ -1,0 +1,34 @@
+[
+    {
+        "Id": 1,
+        "Speciality": "Dentists",
+        "Branches": [
+                        {"Id": 1, "Branch": "Dentist", "SpecialityId": 1},
+                        {"Id": 2, "Branch": "Prosthodontist", "SpecialityId": 1}
+                    ]
+    },
+    {
+        "Id": 2,
+        "Speciality": "Doctors",
+        "Branches": [
+                        {"Id": 1, "Branch": "Ophthalmologist", "SpecialityId": 2},
+                        {"Id": 2, "Branch": "Dermatologist", "SpecialityId": 2}
+                    ]
+    },
+    {
+        "Id": 3,
+        "Speciality": "Alternative Medicine Doctors (AYUSH)",
+        "Branches": [
+                        {"Id": 1, "Branch": "Ayurveda", "SpecialityId": 3},
+                        {"Id": 2, "Branch": "Homeopath", "SpecialityId": 3}
+                    ]
+    },
+    {
+        "Id": 4,
+        "Speciality": "Therapists & Nutritionists",
+        "Branches": [
+                        {"Id": 1, "Branch": "Acupuncturist", "SpecialityId": 4},
+                        {"Id": 2, "Branch": "Physiotherapist", "SpecialityId": 4}
+                    ]
+    }
+]

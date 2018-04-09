@@ -1,0 +1,14 @@
+.title{
+    font-weight: bold;
+}
+.doctorRow { background: white; padding: 2px 0px 5px 0px; }
+.doctorRow:nth-child(odd) { background: lightgray; }
+.button:hover{
+    cursor: pointer
+}
+.button{
+    border-radius: 8px;
+    background-color: blue;
+    color: white;
+    padding: 10px 10px;
+}

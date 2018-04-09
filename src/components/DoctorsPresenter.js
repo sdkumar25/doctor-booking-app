@@ -1,10 +1,6 @@
 import React from 'react'
 import DoctorRow from './DoctorRow'
-
-
-
 const DoctorsPresenter = ({ selectedSpeciality, filteredDoctor, setSpecialistAndDoctor }) => (
-
    <div className="container">
         <div>
             <h1>Choose Doctor</h1>
@@ -19,5 +15,4 @@ const DoctorsPresenter = ({ selectedSpeciality, filteredDoctor, setSpecialistAnd
         </div>
     </div>
 )
-
 export default DoctorsPresenter

@@ -16,7 +16,6 @@ export const setSpecialistAndDoctor = (specialityAndDoctorObj) => {
 export const submitAppointmentForm = (formValues) => {
      return (dispatch) => {
         dispatch({ type: 'Submit_Appointment_Form', formValues: formValues });
-        debugger;
         dispatch(push('/appointmentSuccessReview'));
     }; 
 }

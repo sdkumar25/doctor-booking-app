@@ -1,5 +1,4 @@
 import _ from 'lodash'
-import moment from 'moment'
 
 const doctorsData = require('../data/doctors.json');
 let appointmentData = { Doctor : { AvailableTimeSlots : [] }, DoctorName: "", Specialist: "", AppointmentDate:"", AppointmentTime: "", PatientName: "", PatientContactNo: "", Notes:"" };
